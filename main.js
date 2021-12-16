@@ -1,7 +1,7 @@
 var http = require("http");
 
 const redis = require("redis");
-const client = redis.createClient(process.env.REDIS_PORT, process.env.REDIS_HOST, {auth_pass: process.env.REDIS_KEY, tls: {servername: process.env.REDIS_HOST}});
+const client = redis.createClient(process.env.REDIS_PORT, process.env.REDIS_HOST, {auth_pass: process.env.REDIS_PASSWORD, tls: {servername: process.env.REDIS_HOST}});
 let result = "";
 
 client.set("foo_rand000000000000", "arun");
